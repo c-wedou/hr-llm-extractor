@@ -1,0 +1,9 @@
+transformers
+peft
+trl==0.12.0
+bitsandbytes
+datasets
+torch
+sentencepiece
+rouge_score
+numpy
