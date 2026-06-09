@@ -3,7 +3,12 @@ Fine-tuning de Mistral-7B-v0.1 sur le Code du Travail français avec QLoRA et PE
 Problème résolu
 Les professionnels RH et juristes ont besoin de réponses précises sur le Code du Travail français sans passer par un juriste à chaque question. Mistral-7B est choisi pour trois raisons : open source (fine-tunable contrairement à GPT-4), déployable localement sans dépendance API, et utilisable commercialement sans coût par token en production.
 Architecture
-hr-llm-extractor/ ├── config.py ← paramètres centralisés : modèle, LoRA, entraînement, chemins ├── data/ │ ├── prepare_dataset.py ← chargement du dataset HuggingFace, formatage Alpaca, split train/test │ ├── train.json ← 90% des données — utilisées pour l'entraînement │ └── test.json ← 10% des données — jamais vues par le modèle pendant l'entraînement └── src/ ├── train.py ← chargement Mistral en 4 bits, application LoRA, entraînement, sauvegarde ├── inference.py ← chargement du modèle fine-tuné, interface question/réponse └── evaluate.py ← évaluation sur test.json, calcul du score ROUGE-L moyen
+hr-llm-extractor/ ├── config.py ← paramètres centralisés : modèle, LoRA, entraînement, chemins 
+                  ├── data/ │ ├── prepare_dataset.py ← chargement du dataset HuggingFace, formatage Alpaca, split train/test│                   ├── train.json ← 90% des données — utilisées pour l'entraînement 
+                            │ └── test.json ← 10% des données — jamais vues par le modèle pendant l'entraînement
+                  └── src/    ├── train.py ← chargement Mistral en 4 bits, application LoRA, entraînement, sauvegarde 
+                              ├── inference.py ← chargement du modèle fine-tuné, interface question/réponse  
+                              └── evaluate.py ← évaluation sur test.json, calcul du score ROUGE-L moyen
 
 
 
