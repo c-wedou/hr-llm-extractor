@@ -48,8 +48,8 @@ génération de texte.
 
 | Modèle | Train Loss | ROUGE-L moyen | Hardware |
 |--------|-----------|---------------|----------|
-| facebook/opt-125m | 0.4836 | ~0.09 | CPU |
-| mistralai/Mistral-7B-v0.1 | 0.2346 | ~0.17 | CPU |
+| facebook/opt-125m | 0.4836 | 0.09 | CPU |
+| mistralai/Mistral-7B-v0.1 | 0.2346 | 0.17 | CPU |
 
 
 ## Dataset
