@@ -6,7 +6,8 @@ Architecture
 
 
     hr-llm-extractor/ ├── config.py ← paramètres centralisés : modèle, LoRA, entraînement, chemins 
-                      ├── data/   ├── prepare_dataset.py ← dataset HuggingFace, formatage Alpaca, split train/test                                           ├── train.json ← 90% des données — utilisées pour l'entraînement 
+                      ├── data/   ├── prepare_dataset.py ← dataset HuggingFace, formatage Alpaca, split train/test
+                                  ├──train.json ← 90% des données — utilisées pour l'entraînement 
                                   └── test.json ← 10% des données — jamais vues par le modèle pendant l'entraînement
                       └── src/    ├── train.py ← chargement Mistral en 4 bits, application LoRA, entraînement, sauvegarde 
                                   ├── inference.py ← chargement du modèle fine-tuné, interface question/réponse  
